@@ -1,0 +1,12 @@
+streamlit==1.32.0
+torch==2.3.0
+torchvision==0.18.0
+transformers==4.41.0
+pillow==10.3.0
+numpy==1.26.4
+opencv-python==4.8.0
+matplotlib==3.8.4
+requests==2.31.0
+aiohttp==3.9.5
+streamlit-option-menu==0.3.12
+plotly==5.22.0
