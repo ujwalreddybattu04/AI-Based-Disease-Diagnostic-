@@ -6,9 +6,9 @@ This project aims to assist medical professionals and researchers by providing a
 ## Features
 
 - **Multiple Disease Models**:
-  - Lung Cancer (Benign, Malignant, Normal)
-  - Kidney Disease (Cyst, Normal, Stone, Tumor)
-  - COVID-19 (COVID, NON-COVID)
+- Lung Cancer (Benign, Malignant, Normal)
+- Kidney Disease (Cyst, Normal, Stone, Tumor)
+- COVID-19 (COVID, NON-COVID)
 - **Deep Learning Models**: Uses EfficientNet-B1, B3, and B4 architectures from Hugging Face’s Transformers library.
 - **Grad-CAM Visualizations**: Highlights influential image regions for predictions using interactive Plotly heatmaps.
 - **Batch Processing**: Supports uploading and processing multiple images simultaneously.
@@ -16,3 +16,16 @@ This project aims to assist medical professionals and researchers by providing a
 - **Model Metrics**: Displays accuracy and F1-score for each model.
 - **Error Handling**: Robust validation and logging for images, weights, and processing.
 - **Downloadable Results**: Save Grad-CAM visualizations as PNG files.
+
+## Models
+The application includes three pre-trained models, each tailored to a specific medical condition. All models are based on EfficientNet architectures, fine-tuned for medical image classification.
+
+### 1. Lung Cancer Model
+- **Architecture**: EfficientNet-B1
+- **Classes**: Benign, Malignant, Normal
+- **Number of Classes**: 3
+- **Metrics**:
+  - Accuracy: 92%
+  - F1-Score: 90%
+- **Use Case**: Classifies lung CT scans to detect cancerous (malignant), non-cancerous (benign), or healthy (normal) tissue.
+- **Weight File**: `Lung-Cancer_model.pth`
