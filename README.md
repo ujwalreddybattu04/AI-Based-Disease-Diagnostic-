@@ -29,3 +29,41 @@ The application includes three pre-trained models, each tailored to a specific m
   - F1-Score: 90%
 - **Use Case**: Classifies lung CT scans to detect cancerous (malignant), non-cancerous (benign), or healthy (normal) tissue.
 - **Weight File**: `Lung-Cancer_model.pth`
+
+  ### 2. Kidney Disease Model
+- **Architecture**: EfficientNet-B3
+- **Classes**: Cyst, Normal, Stone, Tumor
+- **Number of Classes**: 4
+- **Metrics**:
+  - Accuracy: 89%
+  - F1-Score: 87%
+- **Use Case**: Analyzes kidney CT scans to identify cysts, stones, tumors, or normal kidney tissue.
+- **Weight File**: `Kidney_model_best (1).pth`
+
+### 3. COVID-19 Model
+- **Architecture**: EfficientNet-B4
+- **Classes**: COVID, NON-COVID
+- **Number of Classes**: 2
+- **Metrics**:
+  - Accuracy: 95%
+  - F1-Score: 93%
+- **Use Case**: Detects COVID-19 infection in chest X-rays or CT scans.
+- **Weight File**: `Covid_model_best.pth`
+
+Each model uses the Hugging Face `transformers` library for loading pre-trained EfficientNet weights, fine-tuned with custom weights stored in `.pth` files. Grad-CAM is applied to provide visual explanations of the model’s decisions.
+
+---
+
+## Installation
+
+### Prerequisites
+- **Python**: Version 3.8–3.11
+- **Operating System**: Windows, macOS, or Linux
+- **Hardware**: CPU (GPU optional with CUDA support for faster inference)
+- **Model Weights**: Pre-trained `.pth` files for each model (see [Model Weights](#model-weights))
+
+### Steps
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/ujwalreddybattu04/AI-Based-Disease-Diagnostic-.git
+   cd AI-Based-Disease-Diagnostic-
