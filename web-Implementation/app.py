@@ -56,14 +56,14 @@ MODEL_CONFIGS = {
         "model_name": "google/efficientnet-b3",
         "num_labels": 4,
         "classes": ["Cyst", "Normal", "Stone", "Tumor"],
-        "weight_path": "models//Kidney_model_best (1).pth",
+        "weight_path": "web-Implementation//models//Kidney_model_best (1).pth",
         "metrics": {"accuracy": 0.89, "f1_score": 0.87}
     },
     "COVID-19": {
         "model_name": "google/efficientnet-b4",
         "num_labels": 2,
         "classes": ["COVID", "NON-COVID"],
-        "weight_path": "models//Covid_model_best.pth",
+        "weight_path": "web-Implementation//models//Covid_model_best.pth",
         "metrics": {"accuracy": 0.95, "f1_score": 0.93}
     }
 }
