@@ -30,7 +30,7 @@ The application includes three pre-trained models, each tailored to a specific m
 - **Use Case**: Classifies lung CT scans to detect cancerous (malignant), non-cancerous (benign), or healthy (normal) tissue.
 - **Weight File**: `Lung-Cancer_model.pth`
 
-  ### 2. Kidney Disease Model
+### 2. Kidney Disease Model
 - **Architecture**: EfficientNet-B3
 - **Classes**: Cyst, Normal, Stone, Tumor
 - **Number of Classes**: 4
