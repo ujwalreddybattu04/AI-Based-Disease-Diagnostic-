@@ -49,7 +49,7 @@ MODEL_CONFIGS = {
         "model_name": "google/efficientnet-b1",
         "num_labels": 3,
         "classes": ["Benign", "Malignant", "Normal"],
-        "weight_path": "models//Lung-Cancer_model.pth",
+        "weight_path": "web-Implementation//models//Lung-Cancer_model.pth",
         "metrics": {"accuracy": 0.92, "f1_score": 0.90}
     },
     "Kidney Disease": {
