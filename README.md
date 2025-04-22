@@ -62,6 +62,16 @@ Each model uses the Hugging Face `transformers` library for loading pre-trained 
 - **Hardware**: CPU (GPU optional with CUDA support for faster inference)
 - **Model Weights**: Pre-trained `.pth` files for each model (see [Model Weights](#model-weights))
 
+  ### Medical Image Classifier
+
+A Streamlit web app that uses deep learning models to classify medical images such as:
+
+- **COVID-19 X-rays**
+- **Kidney Disease**
+- **Lung Cancer**
+
+🔗 **Live Demo:** [medical-image-classifier.streamlit.app](https://medical-image-classifier.streamlit.app)
+
 ### Steps
 1. **Clone the Repository**:
    ```bash
