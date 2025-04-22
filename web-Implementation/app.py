@@ -96,18 +96,42 @@ def run_async_download(url, save_path):
 
 # Load processor and model
 @st.cache_resource
+import os
+import torch
+import streamlit as st
+from transformers import AutoImageProcessor, AutoModelForImageClassification
+from huggingface_hub import snapshot_download
+
+# Your model configs
+MODEL_CONFIGS = {
+    "efficientnet": {
+        "model_name": "google/efficientnet-b4",
+        "num_labels": 4,  # adjust to your use case
+        "weight_path": "./weights/efficientnet_b4.pth",
+        "weight_url": "https://your-server.com/path/to/efficientnet_b4.pth"
+    }
+}
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# Load processor and model
+@st.cache_resource
 def load_model(model_key):
     config = MODEL_CONFIGS[model_key]
     try:
-        processor = AutoImageProcessor.from_pretrained(config["model_name"])
+        # Download model snapshot (offline mode support)
+        model_path = snapshot_download(repo_id=config["model_name"])
+        processor = AutoImageProcessor.from_pretrained(model_path)
         model = AutoModelForImageClassification.from_pretrained(
-            config["model_name"],
+            model_path,
             num_labels=config["num_labels"],
             ignore_mismatched_sizes=True
         ).to(device)
-        
-        # Check if weights exist locally
+
+        # Progress bar
         progress_bar = st.progress(0)
+
+        # Check if weights exist locally
         if not os.path.exists(config["weight_path"]):
             if "weight_url" in config:
                 if not run_async_download(config["weight_url"], config["weight_path"]):
@@ -122,10 +146,10 @@ def load_model(model_key):
         model.load_state_dict(torch.load(config["weight_path"], map_location=device))
         model.eval()
         progress_bar.progress(100)
-        logger.info(f"Loaded model {model_key}")
+        st.success(f"Loaded model '{model_key}' successfully.")
         return processor, model
+
     except Exception as e:
-        logger.error(f"Error loading model: {str(e)}")
         st.error(f"Error loading model: {str(e)}")
         return None, None
 
