@@ -14,6 +14,7 @@ import aiohttp
 from streamlit_option_menu import option_menu
 import plotly.express as px
 import logging
+from huggingface_hub import snapshot_download
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
