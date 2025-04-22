@@ -62,7 +62,7 @@ Each model uses the Hugging Face `transformers` library for loading pre-trained 
 - **Hardware**: CPU (GPU optional with CUDA support for faster inference)
 - **Model Weights**: Pre-trained `.pth` files for each model (see [Model Weights](#model-weights))
 
-  ### Medical Image Classifier
+### Medical Image Classifier
 
 A Streamlit web app that uses deep learning models to classify medical images such as:
 
