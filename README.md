@@ -25,8 +25,8 @@ The application includes three pre-trained models, each tailored to a specific m
 - **Classes**: Benign, Malignant, Normal
 - **Number of Classes**: 3
 - **Metrics**:
-  - Accuracy: 92%
-  - F1-Score: 90%
+  - Accuracy: 97.3%
+  - F1-Score: 94.3%
 - **Use Case**: Classifies lung CT scans to detect cancerous (malignant), non-cancerous (benign), or healthy (normal) tissue.
 - **Weight File**: `Lung-Cancer_model.pth`
 
@@ -35,8 +35,8 @@ The application includes three pre-trained models, each tailored to a specific m
 - **Classes**: Cyst, Normal, Stone, Tumor
 - **Number of Classes**: 4
 - **Metrics**:
-  - Accuracy: 89%
-  - F1-Score: 87%
+  - Accuracy: 99.96%
+  - F1-Score: 99.5%
 - **Use Case**: Analyzes kidney CT scans to identify cysts, stones, tumors, or normal kidney tissue.
 - **Weight File**: `Kidney_model_best (1).pth`
 
@@ -45,8 +45,8 @@ The application includes three pre-trained models, each tailored to a specific m
 - **Classes**: COVID, NON-COVID
 - **Number of Classes**: 2
 - **Metrics**:
-  - Accuracy: 95%
-  - F1-Score: 93%
+  - Accuracy: 99%
+  - F1-Score: 99%
 - **Use Case**: Detects COVID-19 infection in chest X-rays or CT scans.
 - **Weight File**: `Covid_model_best.pth`
 
